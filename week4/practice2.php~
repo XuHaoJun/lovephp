@@ -1,0 +1,9 @@
+<?php
+include './myUtil.php';
+$pNum=$_GET['pNum'];
+for($i=0;$i<$_GET['pNum'];$i++) {
+	if (isPrime($i)) {
+		echo $i." ";
+	}
+}
+?>
