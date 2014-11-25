@@ -2,31 +2,13 @@
 <html>
     <head>
         <title>Simple Map</title>
-        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
         <meta charset="utf-8">
-        <style>
-         html, body, #map-canvas {
-             height: 100%;
-             margin: 0px;
-             padding: 0px
-         }
-        </style>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <link type="text/css" rel="stylesheet" href="foo.css">
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-        <script>
-         var map;
-	 var pos = new google.maps.LatLng(25.048219, 121.517026);
-         function initialize() {
-             var mapOptions = {
-                 zoom: 8,
-                 center: pos
-             };
-             map = new google.maps.Map(document.getElementById('map-canvas'),
-                                       mapOptions);
-         }
-
-         google.maps.event.addDomListener(window, 'load', initialize);
-
-        </script>
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="foo.js"></script>
     </head>
     <body>
         <div id="map-canvas"></div>
