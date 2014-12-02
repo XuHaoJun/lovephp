@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Simple Map</title>
-        <meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html; charset=big5"></meta>
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
         <link type="text/css" rel="stylesheet" href="foo.css">
         <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>

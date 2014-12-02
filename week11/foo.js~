@@ -1,4 +1,4 @@
-Ôªøfunction initialize() {
+function initialize() {
   var centerPos = new google.maps.LatLng(25.048219, 121.517026);
   var mapOptions = {
     zoom: 13,
@@ -10,25 +10,13 @@
     console.log(data);
     _.each(data.positions, function(pos) {
       var mapPos = new google.maps.LatLng(pos.latitude, pos.longitude);
-          var pinColor = "FE7569";
-    var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
-        new google.maps.Size(21, 34),
-        new google.maps.Point(0,0),
-        new google.maps.Point(10, 34));
-    var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
-        new google.maps.Size(40, 37),
-        new google.maps.Point(0, 0),
-        new google.maps.Point(12, 35));
       var marker = new google.maps.Marker({
         position: mapPos,
         map: map,
-        title: pos.title,
-		icon: pinImage,
-		shadow: pinShadow
+        title: pos.title
       });
-
       var infowindow = new google.maps.InfoWindow({
-	      content: "<h4>" + pos.title + "</h4>" + "<p>ÁõÆÂâçËªäËºõÊï∏: " + pos.sbi + "</p>" + "<p> Á©∫‰ΩçÊï∏Èáè: " + pos.bemp + "</p>"
+	      content: "<h4>" + pos.title + "</h4>" + "<p>•ÿ´e®ÆΩ¯º∆: " + pos.sbi + "</p>" + "<p> ™≈¶Ïº∆∂q: " + pos.bemp + "</p>"
       });
       google.maps.event.addListener(marker, 'click', function() {
         infowindow.open(map,marker);
